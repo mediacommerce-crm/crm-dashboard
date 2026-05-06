@@ -136,17 +136,17 @@ tbody td { padding: 10px 14px; vertical-align: middle; }
       <svg viewBox="0 0 20 20" fill="currentColor"><path d="M4 4h12v2H4V4zm0 4h12v2H4V8zm0 4h7v2H4v-2z"/></svg>Registro de pautas
     </button>
     <div class="nav-label" style="margin-top:8px">Comerciales</div>
-    <button class="nav-item" onclick="filterByComercial('Valentina')">
-      <span class="com-avatar" style="background:#EEEDFE;color:#534AB7">VR</span>Valentina R.
+    <button class="nav-item" onclick="filterByComercial('Paola')">
+      <span class="com-avatar" style="background:#EEEDFE;color:#534AB7">VR</span>Paola R.
     </button>
-    <button class="nav-item" onclick="filterByComercial('Carlos')">
-      <span class="com-avatar" style="background:#E1F5EE;color:#0F6E56">CM</span>Carlos M.
+    <button class="nav-item" onclick="filterByComercial('Luisa')">
+      <span class="com-avatar" style="background:#E1F5EE;color:#0F6E56">CM</span>Luisa M.
     </button>
-    <button class="nav-item" onclick="filterByComercial('Daniela')">
-      <span class="com-avatar" style="background:#FAECE7;color:#993C1D">DP</span>Daniela P.
+    <button class="nav-item" onclick="filterByComercial('Roberto')">
+      <span class="com-avatar" style="background:#FAECE7;color:#993C1D">DP</span>Roberto P.
     </button>
-    <button class="nav-item" onclick="filterByComercial('Miguel')">
-      <span class="com-avatar" style="background:#E6F1FB;color:#185FA5">MA</span>Miguel A.
+    <button class="nav-item" onclick="filterByComercial('Camilo')">
+      <span class="com-avatar" style="background:#E6F1FB;color:#185FA5">MA</span>Camilo A.
     </button>
     <div class="sidebar-footer">
       <div style="font-size:11px;color:var(--text3);padding:0 8px">
@@ -162,10 +162,10 @@ tbody td { padding: 10px 14px; vertical-align: middle; }
         <div class="filters">
           <select class="filter-select" id="f-com" onchange="applyFilters()">
             <option value="">Todos los comerciales</option>
-            <option value="Valentina">Valentina R.</option>
-            <option value="Carlos">Carlos M.</option>
-            <option value="Daniela">Daniela P.</option>
-            <option value="Miguel">Miguel A.</option>
+            <option value="Paola">Paola R.</option>
+            <option value="Luisa">Luisa M.</option>
+            <option value="Roberto">Roberto P.</option>
+            <option value="Camilo">Camilo A.</option>
           </select>
           <select class="filter-select" id="f-estado" onchange="applyFilters()">
             <option value="">Todos los estados</option>
@@ -269,10 +269,10 @@ tbody td { padding: 10px 14px; vertical-align: middle; }
 // CONFIGURACIÓN — edita solo estos valores
 // =============================================
 const SHEET_IDS = {
-  Valentina: "1iALSKRiJRtoRPogF5oiliYdyA1hey-kcyjo9jHvu0nA",
-  Carlos:    "1cZOjQol0Gm_pJkIu_hyTxHCk6i53J_simGQZ_LGiVV4",
-  Daniela:   "1o_EaCS2wCkvoKwXFYiGRCKV0tNvsRQoR1MVNp2pBYVM",
-  Miguel:    "11V-uDJnu7f7BjUgmWLU5kfoLbH9oy6BBqttll83RSHU"
+  Paola:   "1iALSKRiJRtoRPogF5oiliYdyA1hey-kcyjo9jHvu0nA",
+  Luisa:   "1cZOjQol0Gm_pJkIu_hyTxHCk6i53J_simGQZ_LGiVV4",
+  Roberto: "1o_EaCS2wCkvoKwXFYiGRCKV0tNvsRQoR1MVNp2pBYVM",
+  Camilo:  "11V-uDJnu7f7BjUgmWLU5kfoLbH9oy6BBqttll83RSHU"
 };
 const API_KEY = "AIzaSyCMQ3Oyd4-WmL30h8o6117qDPTqHah1ezE";
 const DIAS_ALERTA_VENCIMIENTO = 7;
@@ -286,7 +286,7 @@ const ALERTS = [];
 const SEMANAS = ['Sem -3','Sem -2','Sem -1','Sem actual'];
 const CANALES = ['Digital','Vallas móviles','Estaciones'];
 const CANAL_COLORS = ['#534AB7','#1D9E75','#D85A30'];
-const COM_COLORS = {Valentina:'#534AB7',Carlos:'#0F6E56',Daniela:'#993C1D',Miguel:'#185FA5'};
+const COM_COLORS = {Paola:'#534AB7',Luisa:'#0F6E56',Roberto:'#993C1D',Camilo:'#185FA5'};
 let currentPage = 'dashboard';
 let selWeek = 'Sem actual';
 let chartEstado=null, chartCanal=null, chartMain=null, chartVal=null;
