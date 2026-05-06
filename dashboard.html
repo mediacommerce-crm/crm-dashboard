@@ -674,7 +674,7 @@ buildDashboard();
           tipo_cliente: r[3] || "",
           inicio:    convertirFecha(r[4]),
           fin:       convertirFecha(r[5]),
-          estado:    r[6]  || "Visitado",
+          estado:    (r[6] || "Visitado").trim(),
           valor:     parseFloat(r[7]) || 0,
           notas:     r[8]  || "",
           updated:   convertirFecha(r[9]),
